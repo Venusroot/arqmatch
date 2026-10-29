@@ -1,59 +1,137 @@
 # 🏢 ArqMatch
 
-> A ARQUITETURA É A ARTE DE DESENHAR SONHOS
+> *A arquitetura é a arte de desenhar sonhos.*
 
-O **ArqMatch** é uma plataforma web criada para simplificar e humanizar a contratação de serviços de arquitetura e design de interiores. O projeto funciona como uma ponte direta entre clientes que buscam transformar seus espaços e profissionais que querem expor seu portfólio, permitindo a descoberta de projetos por estilo, localização e afinidade visual.
+![Status](https://img.shields.io/badge/status-em%20desenvolvimento-yellow)
+![React](https://img.shields.io/badge/React-18-61DAFB?logo=react&logoColor=white)
+![TypeScript](https://img.shields.io/badge/TypeScript-5-3178C6?logo=typescript&logoColor=white)
 
-> ⚠️ **Status do Projeto:** 🚧 *Em desenvolvimento* 🚧
+O **ArqMatch** é uma plataforma web que facilita a contratação de serviços de arquitetura e design de interiores. Ela conecta clientes que querem transformar seus espaços com profissionais que querem mostrar seu portfólio, permitindo encontrar projetos por estilo, localização e afinidade visual.
 
----
-
-## 🎯 Intuito do Projeto
-
-Encontrar o arquiteto ideal ou o projeto certo costuma ser um processo burocrático e fragmentado. O **ArqMatch** resolve essa dor oferecendo:
-
-- **Para Clientes:** Uma vitrine intuitiva de projetos reais para buscar inspiração, filtrar por estilo/região e entrar em contato direto com o profissional responsável.
-- **Para Arquitetos:** Um espaço elegante e dedicado para expor seu portfólio com curadoria visual, alcançando clientes alinhados com sua estética de trabalho.
-- **Comunicação Direta:** Agilidade para iniciar conversas e tirar projetos do papel sem intermediários.
+> 🚧 **Status:** em desenvolvimento
 
 ---
 
-## 🎨 Identidade Visual e Experiência (UX/UI)
+## 🎯 Sobre o Projeto
 
-O design foi construído focado em uma estética **minimalista, elegante e sofisticada**, destacando o conteúdo visual dos projetos de arquitetura:
+Encontrar o arquiteto ideal costuma ser um processo burocrático e fragmentado. O ArqMatch resolve isso:
 
-- **Paleta de Cores:** Contraste marcante entre tons escuros (*Dark Theme*), detalhes em dourado metálico (`--sunflower-gold`) e tipografia em branco suave (`--ghost-white`).
-- **Tipografia Elegante:** Combinação de fontes clássicas com serifa (`Georgia`) na marca para transmitir credibilidade, e tipografia limpa sem serifa para fácil leitura.
-- **Carrossel Interativo:** Cards de projetos dinâmicos com navegação entre imagens e tags informativas de estilo e localização.
-- **Layout Responsivo:** Menu adaptável (*mobile-first*) com transições fluídas para navegação mobile e desktop.
+- **Para clientes:** vitrine de projetos reais para se inspirar, filtrar por estilo e região e falar direto com o profissional.
+- **Para arquitetos:** espaço elegante para expor o portfólio e alcançar clientes alinhados com seu estilo.
+- **Comunicação direta:** conversa sem intermediários, para tirar projetos do papel mais rápido.
+
+
+## 🖼️ Demonstração
+
+<table align="center">
+  <tr>
+    <td align="center">
+      <a href="lego-html/screenshots/1.png">
+        <img width="1920" height="914" alt="image" src="https://github.com/user-attachments/assets/ff6f3eef-2474-4748-9a5c-56c3f8b58939" />
+      </a>
+      <br><sub><b>Home</b></sub>
+    </td>
+    <td align="center">
+      <a href="lego-html/screenshots/2.png">
+        <img width="1872" height="905" alt="image" src="https://github.com/user-attachments/assets/a003f35d-15b4-469e-a919-8a36a97f49df" />
+      </a>
+      <br><sub><b>Sobre</b></sub>
+    </td>
+  </tr>
+  <tr>
+    <td align="center">
+      <a href="lego-html/screenshots/3.png">
+        <img width="1303" height="744" alt="image" src="https://github.com/user-attachments/assets/643a7103-749f-45bf-b3c0-de5552e0745f" />
+      </a>
+      <br><sub><b>Projetos</b></sub>
+    </td>
+    <td align="center">
+      <a href="lego-html/screenshots/4.png">
+        <img src="lego-html/screenshots/4.png" width="100%" alt="Login">
+      </a>
+      <br><sub><b>Login</b></sub>
+    </td>
+  </tr>
+</table>
+
+> 💡 Clique nas imagens para ampliar.
+
 
 ---
 
-## 🛠️ Tecnologias Utilizadas
+## ✨ Funcionalidades
 
-- **[React](https://reactjs.org/)** com **[TypeScript](https://www.typescriptlang.org/)** (Interface e tipagem estática)
-- **[React Router Dom](https://reactrouter.com/)** (Navegação dinâmica e rotas SPA)
-- **CSS3** (Estilização modular e responsiva)
+- 🔎 Descoberta de projetos por estilo, localização e afinidade visual
+- 🖼️ Cards de projetos com carrossel de imagens
+- 🏷️ Tags de estilo e localização
+- 🔐 Login de usuários
+- 📱 Layout responsivo (mobile-first)
+
+---
+
+## 🎨 Design e UX
+
+Visual **minimalista, elegante e sofisticado**, que destaca as imagens dos projetos.
+
+- **Cores:** tema escuro com detalhes em dourado (`--sunflower-gold`) e texto em branco suave (`--ghost-white`).
+- **Tipografia:** fonte com serifa (`Georgia`) na marca e fonte sem serifa no restante, para facilitar a leitura.
+- **Carrossel interativo:** navegação entre as imagens de cada projeto.
+- **Menu responsivo:** adaptado para celular e desktop, com transições suaves.
 
 ---
 
-## 📁 Estrutura de Páginas e Componentes
+## 🛠️ Tecnologias
 
-- `Home`: Apresentação principal da plataforma e chamada para ação (*CTA*).
-- `Sobre`: Missão do projeto, proposta de valor e estatísticas da plataforma.
-- `Projetos`: Galeria interativa com carrossel de fotos, tags de estilo, localização e botão para detalhes/contato.
-- `Login`: Permitir login do usuario na plataforma
+| Tecnologia | Uso |
+|------------|-----|
+| [React](https://reactjs.org/) | Interface |
+| [TypeScript](https://www.typescriptlang.org/) | Tipagem estática |
+| [React Router DOM](https://reactrouter.com/) | Rotas e navegação (SPA) |
+| CSS3 | Estilização responsiva |
 
 ---
+
+## 📁 Páginas
+
+| Página | Descrição |
+|--------|-----------|
+| `Home` | Apresentação da plataforma e chamada para ação (CTA) |
+| `Sobre` | Missão, proposta de valor e estatísticas |
+| `Projetos` | Galeria com carrossel, tags e botão de detalhes/contato |
+| `Login` | Autenticação do usuário |
+
+---
+
+## 🚀 Como Executar
+
+**Pré-requisitos:** [Node.js](https://nodejs.org/) 18 ou superior.
+
+```bash
+# Clone o repositório
+git clone https://github.com/seu-usuario/arqmatch.git
+
+# Entre na pasta
+cd arqmatch
+
+# Instale as dependências
+npm install
+
+# Inicie o servidor de desenvolvimento
+npm run dev
+```
+
+Acesse em `http://localhost:5173`.
+
+---
+## 👥 Autores
+
+Projeto desenvolvido em dupla por:
+
+- **Agatha Moreira** — [GitHub](https://github.com/Tathamjf)
+- **Augusto Mota** — [GitHub](https://github.com/Venusroot)
 
 ---
 
 ## 🎓 Projeto Acadêmico
 
-Este projeto está sendo desenvolvido como parte das atividades acadêmicas do curso de **Desenvolvimento de Software Multiplataforma** na **FATEC Mauá**.
-
----
-
-
-
-   
+Desenvolvido como parte do curso de **Desenvolvimento de Software Multiplataforma** na **FATEC Mauá**.
