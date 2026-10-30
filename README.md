@@ -27,7 +27,7 @@ Encontrar o arquiteto ideal costuma ser um processo burocrático e fragmentado. 
   <tr>
     <td align="center">
       <a href="lego-html/screenshots/1.png">
-        <img width="1920" height="914" alt="image" src="https://github.com/user-attachments/assets/ff6f3eef-2474-4748-9a5c-56c3f8b58939" />
+        <img width="1920" height="953" alt="image" src="https://github.com/user-attachments/assets/cb7b2a66-a1df-4b0e-b64b-0767a3253952" />
       </a>
       <br><sub><b>Home</b></sub>
     </td>
@@ -47,7 +47,7 @@ Encontrar o arquiteto ideal costuma ser um processo burocrático e fragmentado. 
     </td>
     <td align="center">
       <a href="lego-html/screenshots/4.png">
-        <img src="lego-html/screenshots/4.png" width="100%" alt="Login">
+        <img width="1920" height="900" alt="image" src="https://github.com/user-attachments/assets/aac29e7c-60d5-4126-91f3-ca5a0e2c9e4c" />
       </a>
       <br><sub><b>Login</b></sub>
     </td>
