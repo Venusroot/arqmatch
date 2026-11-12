@@ -4,6 +4,9 @@ import { useAuth } from './context/useAuth';
 import { orderService } from './services/orders';
 import type { Order } from './types/domain';
 
+const formatCurrency = (value: number): string =>
+  new Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' }).format(value);
+
 const formatDate = (date: string): string =>
   new Intl.DateTimeFormat('pt-BR', {
     dateStyle: 'medium',
@@ -36,12 +39,12 @@ function Pedidos() {
                 <ul>
                   {order.items.map((item) => (
                     <li key={item.projectId}>
-                      {item.title} — quantidade: {item.quantity}
+                      {item.title} — quantidade: {item.quantity} — {item.price === undefined ? 'valor não disponível' : formatCurrency(item.price * item.quantity)}
                     </li>
                   ))}
                 </ul>
-                <p className="orders-empty">
-                  Este registro local não possui valor financeiro, pois os projetos não têm preço cadastrado.
+                <p className="order-total">
+                  Total: {order.total === undefined ? 'valor não disponível' : formatCurrency(order.total)}
                 </p>
               </article>
             ))}
