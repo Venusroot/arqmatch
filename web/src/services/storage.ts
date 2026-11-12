@@ -27,6 +27,8 @@ const isCartItem = (value: unknown): value is CartItem =>
   Number.isInteger(value.projectId) &&
   typeof value.title === 'string' &&
   (value.image === undefined || typeof value.image === 'string') &&
+  (value.price === undefined ||
+    (typeof value.price === 'number' && Number.isFinite(value.price) && value.price >= 0)) &&
   typeof value.quantity === 'number' &&
   Number.isInteger(value.quantity) &&
   value.quantity > 0;
@@ -40,7 +42,9 @@ const isOrder = (value: unknown): value is Order =>
     value.status === 'Em andamento' ||
     value.status === 'Concluído') &&
   Array.isArray(value.items) &&
-  value.items.every(isCartItem);
+  value.items.every(isCartItem) &&
+  (value.total === undefined ||
+    (typeof value.total === 'number' && Number.isFinite(value.total) && value.total >= 0));
 
 const readJson = (key: string): unknown => {
   try {

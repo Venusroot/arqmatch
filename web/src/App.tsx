@@ -7,6 +7,8 @@ import Cadastro from './Cadastro';
 import Carrinho from './Carrinho';
 import ProtectedRoute from './ProtectedRoute';
 import Pedidos from './Pedidos';
+import Contato from './Contato';
+import Checkout from './Checkout';
 
 function App() {
   return (
@@ -18,6 +20,7 @@ function App() {
         <Route path="/projetos" element={<Projetos />} />
         <Route path="/Sobre" element={<Sobre />} />
         <Route path="/Projetos" element={<Projetos />} />
+        <Route path="/contato" element={<Contato />} />
         <Route path="/login" element={<Login />} />
         <Route path="/cadastro" element={<Cadastro />} />
         <Route
@@ -33,6 +36,14 @@ function App() {
           element={
             <ProtectedRoute>
               <Pedidos />
+            </ProtectedRoute>
+          }
+        />
+        <Route
+          path="/checkout"
+          element={
+            <ProtectedRoute>
+              <Checkout />
             </ProtectedRoute>
           }
         />

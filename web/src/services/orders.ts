@@ -13,6 +13,7 @@ export const orderService = {
       createdAt: new Date().toISOString(),
       status: 'Realizado',
       items: items.map((item) => ({ ...item })),
+      total: items.reduce((total, item) => total + (item.price ?? 0) * item.quantity, 0),
     };
 
     storage.saveOrders([...storage.getOrders(), order]);
