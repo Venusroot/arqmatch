@@ -1,0 +1,96 @@
+.checkout-page {
+  min-height: 100vh;
+  background: var(--coffee-bean);
+  color: var(--ghost-white);
+}
+
+.checkout-content {
+  width: min(100% - 3rem, 1000px);
+  margin: 0 auto;
+  padding: 4rem 0 6rem;
+}
+
+.checkout-content h1 {
+  margin: 0 0 2rem;
+  font-size: 2.4rem;
+}
+
+.checkout-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 300px;
+  gap: 2rem;
+}
+
+.checkout-form,
+.checkout-summary {
+  display: grid;
+  gap: 0.7rem;
+  padding: 1.5rem;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  background: rgba(250, 250, 255, 0.04);
+}
+
+.checkout-form label {
+  margin-top: 0.5rem;
+  color: var(--sunflower-gold);
+  font-size: 0.85rem;
+  font-weight: 700;
+}
+
+.checkout-form input {
+  width: 100%;
+  padding: 0.8rem;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 8px;
+  background: rgba(0, 0, 0, 0.2);
+  color: var(--ghost-white);
+  font: inherit;
+}
+
+.checkout-note {
+  color: rgba(250, 250, 255, 0.7);
+  line-height: 1.5;
+}
+
+.checkout-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.checkout-row div {
+  display: grid;
+  gap: 0.7rem;
+}
+
+.checkout-summary h2 {
+  margin: 0 0 0.5rem;
+}
+
+.checkout-summary p {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  color: rgba(250, 250, 255, 0.75);
+}
+
+.checkout-summary > div {
+  display: flex;
+  justify-content: space-between;
+  margin-top: auto;
+  padding-top: 1rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+  color: var(--sunflower-gold);
+  font-size: 1.2rem;
+}
+
+@media (max-width: 700px) {
+  .checkout-content {
+    width: min(100% - 2rem, 1000px);
+    padding-top: 2.5rem;
+  }
+  .checkout-layout {
+    grid-template-columns: 1fr;
+  }
+}

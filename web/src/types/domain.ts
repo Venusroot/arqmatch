@@ -15,6 +15,8 @@ export interface CartItem {
   projectId: number;
   title: string;
   image?: string;
+  /** Optional to keep carts created before prices were introduced readable. */
+  price?: number;
   quantity: number;
 }
 
@@ -30,4 +32,5 @@ export interface Order {
   createdAt: string;
   status: OrderStatus;
   items: OrderItem[];
+  total?: number;
 }

@@ -65,6 +65,13 @@
   padding-left: 1.2rem;
 }
 
+.order-total {
+  margin: 1.25rem 0 0;
+  color: var(--sunflower-gold);
+  font-size: 1.1rem;
+  font-weight: 700;
+}
+
 @media (max-width: 600px) {
   .orders-content {
     width: min(100% - 2rem, 900px);

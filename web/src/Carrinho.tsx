@@ -1,40 +1,11 @@
 import { Link, useNavigate } from 'react-router-dom';
-import { useState } from 'react';
 import Header from './Header';
 import './Carrinho.css';
 import { useCart } from './context/useCart';
-import { useAuth } from './context/useAuth';
-import { orderService } from './services/orders';
 
 function Carrinho() {
-  const { items, removeItem } = useCart();
-  const { clearCart } = useCart();
-  const { currentUser } = useAuth();
+  const { items, removeItem, total } = useCart();
   const navigate = useNavigate();
-  const [error, setError] = useState('');
-  const [isSubmitting, setIsSubmitting] = useState(false);
-
-  const handleCreateOrder = () => {
-    if (!currentUser || items.length === 0) {
-      return;
-    }
-
-    setError('');
-    setIsSubmitting(true);
-    try {
-      orderService.create(currentUser.id, items);
-      clearCart();
-      navigate('/pedidos');
-    } catch (orderError) {
-      setError(
-        orderError instanceof Error
-          ? orderError.message
-          : 'Não foi possível registrar o pedido.',
-      );
-    } finally {
-      setIsSubmitting(false);
-    }
-  };
 
   return (
     <main className="cart-page">
@@ -57,7 +28,11 @@ function Carrinho() {
                 <div className="cart-item-info">
                   <h2>{item.title}</h2>
                   <p>Quantidade: {item.quantity}</p>
-                  <p>Preço não informado para este projeto.</p>
+                  <p>
+                    {item.price === undefined
+                      ? 'Preço não disponível para este item antigo.'
+                      : `${new Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' }).format(item.price)} por projeto`}
+                  </p>
                 </div>
                 <button
                   className="cart-remove"
@@ -68,17 +43,14 @@ function Carrinho() {
                 </button>
               </article>
             ))}
-            <p className="cart-empty">
-              Os projetos atuais não possuem preço cadastrado. Nenhum total financeiro foi calculado.
-            </p>
-            {error && <p className="auth-error" role="alert">{error}</p>}
-            <button
-              className="auth-submit"
-              type="button"
-              onClick={handleCreateOrder}
-              disabled={isSubmitting}
-            >
-              {isSubmitting ? 'Registrando...' : 'Registrar pedido'}
+            <div className="cart-total">
+              <span>Total para pagamento</span>
+              <strong>
+                {new Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' }).format(total)}
+              </strong>
+            </div>
+            <button className="auth-submit" type="button" onClick={() => navigate('/checkout')}>
+              Ir para checkout
             </button>
           </div>
         )}
